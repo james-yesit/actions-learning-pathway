@@ -1,0 +1,9 @@
+name: hello-world # Names the action
+on: push # When something is pushed to the repository, run the jobs
+jobs:
+  hello-world-job: 
+    runs-on: ubuntu-latest # A job has to run on a specific OS
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3 # Used to access repository code
+      - run: echo "$(cat hello_world.txt)" # Finds the hello world file and prints the output
